@@ -1,0 +1,59 @@
+# Set to 0 to disable being launched. All foods disabled by default.
+foods:
+  crops:
+    potato: 0
+    poisonous_potato: 0
+    melon_slice: 0
+    glow_berries: 0
+    sweet_berries: 0
+    golden_carrot: 0
+    golden_apple: 0
+    enchanted_apple: 0
+    chorus_fruit: 0
+    carrot: 0
+    beetroot: 0
+    apple: 0
+  meat:
+    cooked_rabbit: 0
+    cooked_porkchop: 0
+    cooked_mutton: 0
+    cooked_chicken: 0
+    rotten_flesh: 0
+    raw_porkchop: 0
+    raw_mutton: 0
+    raw_rabbit: 0
+    raw_chicken: 0
+    raw_beef: 0
+    steak: 0
+  fish:
+    cooked_salmon: 0
+    cooked_cod: 0
+    tropical_fish: 0
+    raw_cod: 0
+    raw_salmon: 0
+    pufferfish: 0
+  crafted:
+    suspicious_stew: 0
+    rabbit_stew: 0
+    pumpkin_pie: 0
+    mushroom_stew: 0
+    dried_kelp: 0
+    cookie: 0
+    bread: 0
+    beetroot_soup: 0
+    baked_potato: 0
+    cake: 0
+    honey_bottle: 0
+  other:
+    milk: 0
+    spider_eye: 0
+
+# Note to self, reconsider doing it with plain old model data
+# For custom foods. Recommended set-up in-game.
+itemsadder:
+  enabled: false
+  items:
+nexo:
+  enabled: false
+  items:
+

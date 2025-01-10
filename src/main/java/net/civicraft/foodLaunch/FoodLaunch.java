@@ -1,27 +1,24 @@
 package net.civicraft.foodLaunch;
 
+import net.civicraft.foodLaunch.command.FLCommand;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.Vector;
 
-public final class FoodLaunch extends JavaPlugin {
+import java.util.Objects;
 
+public final class FoodLaunch extends JavaPlugin {
+    static FoodLaunch instance;
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        Objects.requireNonNull(getCommand("foodlaunch")).setExecutor(new FLCommand());
+        instance = this;
     }
 
-    public void onEat(PlayerItemConsumeEvent e) {
-        Player p = e.getPlayer();
-        Material food = e.getItem().getType();
-
-        if (food.isEdible()) {
-            Vector veloc = new Vector(0, 1.5, 0);
-            p.setVelocity(veloc);
-        }
+    public static FoodLaunch getInstance() {
+        return instance;
     }
 
     @Override

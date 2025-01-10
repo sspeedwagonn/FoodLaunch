@@ -2,3 +2,7 @@ name: FoodLaunch
 version: '1.0'
 main: net.civicraft.foodLaunch.FoodLaunch
 api-version: '1.21'
+commands:
+  foodlaunch:
+    aliases: fl
+    permission: foodlaunch.admin
