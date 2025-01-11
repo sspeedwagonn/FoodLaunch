@@ -17,25 +17,16 @@ public class FLCommand implements CommandExecutor {
                 player.sendMessage("Information here.");
             } else if (strings.length == 1) {
                 switch (strings[0]) {
-                    case "help":
-                        player.sendMessage("Help info here.");
-                        break;
-                    case "config":
-                        ConfigGUI.cfg(player);
-                        break;
-                    default:
-                        player.sendMessage("Invalid command.");
+                    case "reload" -> instance.reloadConfig();
+                    case "help" -> player.sendMessage("Help info here.");
+                    case "config" -> ConfigGUI.cfg(player);
+                    default -> player.sendMessage("Invalid command.");
                 }
             } else if (strings.length == 2) {
                 switch (strings[0]) {
-                    case "add":
-                        player.sendMessage("Custom item made.");
-                        break;
-                    case "remove":
-                        player.sendMessage("Custom item removed.");
-                        break;
-                    default:
-                        player.sendMessage("Invalid command.");
+                    case "add" -> player.sendMessage("Custom item made.");
+                    case "remove" -> player.sendMessage("Custom item removed.");
+                    default -> player.sendMessage("Invalid command.");
                 }
             }
         } else {
